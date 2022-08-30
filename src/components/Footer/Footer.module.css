@@ -1,0 +1,7 @@
+.myFooter {
+    height: 100px;
+    background-color: hsl(170, 50%, 35%);
+    padding: 10px;
+    grid-area: ft;
+    color: white;
+  }

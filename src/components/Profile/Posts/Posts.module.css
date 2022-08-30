@@ -1,0 +1,75 @@
+h2,
+h3 {
+    color: hsl(170, 90%, 22%);
+}
+
+.posts h2 {
+    font-size: 1.4em;
+    font-weight: 500;
+    margin-left: .5em;
+}
+
+.newPostWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    /* width: 90%; */
+    margin: 15px auto 25px;
+}
+
+.newPost {
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    resize: none;
+    border: 1px solid hsl(60, 20%, 80%);
+    border-radius: 4px;
+}
+
+.sendButton {
+    padding: 5px 25px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(0deg, #009999, #007777);
+    border: #006161 1px solid;
+    border-radius: 30px;
+    opacity: .80;
+    transition: ease all .2s;
+}
+
+.sendButton:hover {
+    opacity: 1;
+}
+
+.sendButton:active {
+    opacity: 1;
+    color: #006161;
+    background: transparent;
+    transition: none;
+}
+
+.releasedPost {
+    border-top: 5px solid hsl(60, 40%, 75%);
+    padding: 20px;
+}
+
+.releasedPost:last-child {
+    border-bottom: 5px solid hsl(60, 40%, 75%);
+}
+
+.releasedPost:nth-child(odd) {
+    background-color: hsl(60, 50%, 90%);
+}
+
+.releasedPost:nth-child(even) {
+    background-color: hsl(60, 50%, 87%);
+}
+
+.releasedPost h3 {
+    margin-bottom: .2em;
+    font-size: 1.1em;
+    font-weight: 500;
+}

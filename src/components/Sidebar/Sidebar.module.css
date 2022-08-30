@@ -1,0 +1,33 @@
+.sidebar {
+    background-color: hsl(60, 60%, 85%);
+    padding: 20px;
+    grid-area: sd;
+}
+
+.myNav {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.myNav ul {
+    list-style: none;
+}
+
+.myNav ul li {
+    margin-bottom: 1.2em;
+    text-transform: capitalize;
+}
+
+.myNav ul li:last-child {
+    margin-bottom: 0;
+}
+
+.myNav ul a {
+    color: hsl(170, 90%, 22%);
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.myNav ul a:hover {
+    color: hsl(170, 70%, 40%);
+}

@@ -1,0 +1,13 @@
+.myHeader {
+    background-color: hsl(170, 50%, 35%);
+    padding: 10px;
+    grid-area: hd;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 20px;
+  }
+  .myHeader img {
+    height: 100%;
+  }
