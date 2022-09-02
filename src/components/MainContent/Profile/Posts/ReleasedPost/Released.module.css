@@ -1,0 +1,54 @@
+.releasedPost {
+    color: var(--base-color);
+    border-top: 5px solid var(--post-border-color);
+    padding: 20px;
+}
+
+.releasedPost:last-child {
+    border-bottom: 5px solid var(--post-border-color);
+}
+
+.releasedPost:nth-child(odd) {
+    background-color: hsl(60, 55%, 92%);
+}
+
+.releasedPost:nth-child(even) {
+    background-color: hsl(60, 55%, 88%);
+}
+
+.releasedPost__title {
+    margin-top: .2em;
+    margin-bottom: .2em;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--main-title-color);
+}
+
+.releasedPost__ava {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--post-border-color);
+    border-radius: 50%;
+}
+
+.releasedPost__likesBox {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.releasedPost__likeAnchor {
+    display: block;
+}
+
+.releasedPost__likeImg {
+    height: 20px;
+}
+
+.releasedPost__numberOfLikes {
+    font-size: .85em;
+    color: var(--likes-color);
+}

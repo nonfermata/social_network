@@ -1,0 +1,28 @@
+.menu {
+    font-size: 16px;
+    font-weight: 500;
+    list-style: none;
+}
+
+.item {
+    margin-bottom: 1.2em;
+    text-transform: capitalize;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.item a {
+    color: var(--main-title-color);
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.item a:hover {
+    color: var(--links-hover-color);
+}
+
+.item a.active {
+    color: var(--links-active-color);
+}

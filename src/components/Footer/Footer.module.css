@@ -1,7 +1,7 @@
 .myFooter {
-    height: 100px;
-    background-color: hsl(170, 50%, 35%);
-    padding: 10px;
-    grid-area: ft;
-    color: white;
-  }
+  color: var(--base-light-color);
+  background-color: var(--header-bg-color);
+  height: 100px;
+  padding: 10px;
+  grid-area: footer;
+}

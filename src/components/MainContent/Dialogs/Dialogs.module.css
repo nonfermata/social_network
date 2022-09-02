@@ -1,0 +1,6 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 1fr auto 3fr;
+    padding: 25px 0;
+}
+
