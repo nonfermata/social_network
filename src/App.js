@@ -14,7 +14,7 @@ const App = props => {
                 <Header />
                 <Sidebar />
                 <MainContent />
-                <Footer />
+                {/*<Footer />*/}
             </div>
         </BrowserRouter>
     )

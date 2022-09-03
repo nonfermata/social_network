@@ -12,7 +12,6 @@
 .item img {
     width: 40px;
     height: 40px;
-    size: unset;
     border: 1px solid var(--main-border-color);
     border-radius: 30%;
 }

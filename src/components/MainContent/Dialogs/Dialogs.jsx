@@ -4,10 +4,19 @@ import classes from './Dialogs.module.css'
 import DialogsList from "./DialogsList/DialogsList";
 import Separator from "./Separator/Separator";
 import ActiveDialog from "./ActiveDialog/ActiveDialog";
-import {dialogsData} from "../../../data/data";
+import {dialogsData} from "../../../data/dialogsData";
 
 const routeElements = dialogsData.map(el => {
-    return <Route path={el.id} element={<ActiveDialog name={el.name}/>}/>
+    return <Route
+        path={el.id}
+        element={
+            <ActiveDialog
+                name={el.name}
+                avaURL={el.avaURL}
+                incom={el.incomingMessages}
+                outcom={el.outcomingMessages}
+            />}
+    />
 })
 
 const Dialogs = props => {

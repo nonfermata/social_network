@@ -1,16 +1,16 @@
 import React from "react"
 import classes from './Released.module.css'
-import likeAva from './like-icon.png'
+import likeAva from '../../../../../data/assets/like-icon.png'
 
 const ReleasedPost = props => {
     return (
         <div className={classes.releasedPost}>
-            <img className={classes.releasedPost__ava} src={props.ava} alt="avatar" />
-            <h3 className={classes.releasedPost__title}>Post {props.number}</h3>
-            <div className={classes.releasedPost__message}>{props.message}</div>
-            <div className={classes.releasedPost__likesBox}>
-                <a className={classes.releasedPost__likeAnchor} href="#"><img className={classes.releasedPost__likeImg} src={likeAva} alt="Like" /></a>
-                <div className={classes.releasedPost__numberOfLikes}>{props.numberOfLikes} likes</div>
+            <img className={classes.avatar} src={props.avaURL} alt="avatar" />
+            <h3 className={classes.title}>Post {props.id}</h3>
+            <div className={classes.postText}>{props.postText}</div>
+            <div className={classes.likesBox}>
+                <a className={classes.likeAnchor} href="#"><img className={classes.likeImg} src={likeAva} alt="Like" /></a>
+                <div className={classes.numberOfLikes}>{props.numberOfLikes} likes</div>
             </div>
         </div>
     )

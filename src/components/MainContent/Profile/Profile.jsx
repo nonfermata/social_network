@@ -3,7 +3,7 @@ import classes from './Profile.module.css'
 import TopImage from './TopImage/TopImage'
 import UserData from './UserData/UserData'
 import Posts from './Posts/Posts'
-import {user} from "../../../data/data";
+import {user} from "../../../data/userData";
 
 const Content = () => {
     return (

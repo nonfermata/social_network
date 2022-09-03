@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
   --base-color: #111;
+  --base-bg-color: #fffff7;
   --base-light-color: #fff;
   --semi-grey-color: hsl(50, 10%, 50%);
   --user-data-color: var(--semi-grey-color);
   --header-bg-color: hsl(170, 90%, 25%);
-  --sidebar-bg-color: hsl(60, 40%, 80%);
+  --sidebar-bg-color: hsl(60, 55%, 86%);
   --main-title-color: var(--header-bg-color);
   --links-hover-color: hsl(170, 60%, 40%);
   --links-active-color: hsl(20, 100%, 45%);
   --main-border-color: hsl(60, 20%, 85%);
   --post-border-color: var(--sidebar-bg-color);
-  --likes-color: hsl(60, 40%, 30%);
+  --likes-color: hsl(60, 40%, 40%);
 }
 
 * {
@@ -40,13 +42,10 @@ body {
   display: grid;
   width: 90%;
   border: 1px solid var(--main-border-color);
-  border-top: 0;
-  border-bottom: 0;
   max-width: 1000px;
   margin: 0 auto;
   grid-template-columns: 2fr 10fr;
   grid-template-rows: 80px;
-  grid-gap: 1px;
   grid-template-areas:
     "header header"
     "sidebar main-content"

@@ -1,7 +1,7 @@
 import React from "react"
 import classes from "./DialogsList.module.css"
 import DialogItem from "./DialogItem/DialogItem";
-import {dialogsData} from "../../../../data/data";
+import {dialogsData} from "../../../../data/dialogsData";
 
 const dialogsItems = dialogsData.map(el => {
     return <DialogItem name={el.name} id={el.id} avaURL={el.avaURL}/>
