@@ -3,22 +3,22 @@
     font-size: 0.95em;
 }
 
-.incomingMessageWrap,
+.incomingMessageWrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding-bottom: 10px;
+    justify-content: flex-end;
+    margin-left: 45%;
+}
+
 .outcomingMessageWrap {
     display: flex;
     align-items: flex-start;
     gap: 8px;
     padding-bottom: 10px;
-}
-
-.incomingMessageWrap {
-    margin-left: 45%;
-    justify-content: flex-end;
-}
-
-.outcomingMessageWrap {
-    margin-right: 45%;
     justify-content: flex-start;
+    margin-right: 45%;
 }
 
 .avatar {
@@ -37,6 +37,7 @@
     padding: 7px 10px 5px;
     border-radius: 10px;
     border-top-right-radius: 0;
+    box-shadow: 0 1px 1px 0 #ddd;
 }
 
 .outcomingMessage {
@@ -45,6 +46,7 @@
     padding: 7px 10px 5px;
     border-radius: 10px;
     border-top-left-radius: 0;
+    box-shadow: 0 1px 1px 0 #ddd;
 }
 
 .incomingMessage::after {
