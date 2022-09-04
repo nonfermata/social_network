@@ -23,6 +23,11 @@ export const dialogsData = [
             },
             {
                 type: 'outcomming',
+                time: 'Feb 20, 1979 22:05:43',
+                text: `Haven't seen for a long time!`
+            },
+            {
+                type: 'outcomming',
                 time: 'Feb 20, 1979 22:07:00',
                 text: `Did you know that your last song is absolutely great?`
             },
