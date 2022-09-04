@@ -6,13 +6,15 @@
 .incomingMessageWrap,
 .outcomingMessageWrap {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 8px;
-    padding-bottom: 15px;
+    padding-bottom: 7px;
+    /* width: fit-content; */
 }
 
 .incomingMessageWrap {
     margin-left: 45%;
+    justify-content: flex-end;
 }
 
 .outcomingMessageWrap {
@@ -25,45 +27,47 @@
     border: 1px solid var(--main-border-color);
 }
 
-.incomingMessage,
-.outcomingMessage {
-    width: 100%;
-    padding: 7px 10px 5px;
-    border-radius: 5px;
-    border-bottom-left-radius: 0;
-    position: relative;
+.avatarRight {
+    order: 1;
 }
 
 .incomingMessage {
     background-color: var(--incom-msg-bg-color);
+    position: relative;
+    padding: 7px 10px 5px;
+    border-radius: 10px;
+    border-top-right-radius: 0;
 }
 
 .outcomingMessage {
     background-color: var(--outcom-msg-bg-color);
-}
-
-.incomingMessage::after,
-.outcomingMessage::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: -8px;
-    border: 4px solid transparent;
-    border-left: 4px solid transparent;
+    position: relative;
+    padding: 7px 10px 5px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
 }
 
 .incomingMessage::after {
-    border-bottom: 4px solid var(--incom-msg-bg-color);
-    border-right: 4px solid var(--incom-msg-bg-color);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -8px;
+    border: 4px solid transparent;
+    border-top: 4px solid var(--incom-msg-bg-color);
+    border-left: 4px solid var(--incom-msg-bg-color);
 }
 
 .outcomingMessage::after {
-    border-bottom: 4px solid var(--outcom-msg-bg-color);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -8px;
+    border: 4px solid transparent;
+    border-top: 4px solid var(--outcom-msg-bg-color);
     border-right: 4px solid var(--outcom-msg-bg-color);
 }
 
 .time {
-    font-family: 'Lato', sans-serif;
     font-size: .8em;
     text-align: right;
     margin-top: 7px;
@@ -72,9 +76,9 @@
 
 .date {
     background-color: #f5f5f5;
-    border-radius: 5px;
+    border-radius: 10px;
     width: fit-content;
-    margin: 10px auto 15px;
+    margin: 15px auto 10px;
     font-size: .9em;
     padding: 5px 10px;
     color: var(--semi-grey-color);
