@@ -6,12 +6,12 @@ export const dialogsData = [
         incomingMessages: [
             {
                 type: 'incomming',
-                time: 'Feb 20, 1979 22:09:32',
+                time: 'Feb 21, 1979 09:09:32',
                 text: `Hi, thank you. But what song do you mean?)`
             },
             {
                 type: 'incomming',
-                time: 'Feb 20, 1979 22:12:22',
+                time: 'Feb 21, 1979 09:12:22',
                 text: `Oh, they said me. And I don't know what to say. Maybe time will say )`
             },
         ],
@@ -28,7 +28,7 @@ export const dialogsData = [
             },
             {
                 type: 'outcomming',
-                time: 'Feb 20, 1979 22:10:22',
+                time: 'Feb 21, 1979 09:10:22',
                 text: `I mean 'Imagine'.`
             },
         ],
@@ -40,7 +40,7 @@ export const dialogsData = [
         incomingMessages: [
             {
                 type: 'incomming',
-                time: 'May 17, 2019 12:00:00',
+                time: 'May 17, 2019 12:05:00',
                 text: `Hi, how are you?`
             },
             {
@@ -50,14 +50,14 @@ export const dialogsData = [
             },
             {
                 type: 'incomming',
-                time: 'May 17, 2019 12:11:33',
+                time: 'May 18, 2019 19:11:33',
                 text: `Lets compose something together!`
             },
         ],
         outcomingMessages: [
             {
                 type: 'outcomming',
-                time: 'May 17, 2019 12:05:00',
+                time: 'May 17, 2019 12:05:23',
                 text: `I'm fine! And you?`
             },
             {
@@ -67,7 +67,7 @@ export const dialogsData = [
             },
             {
                 type: 'outcomming',
-                time: 'May 17, 2019 12:13:17',
+                time: 'May 18, 2019 19:13:17',
                 text: `That is a good idea! )`
             },
         ],
@@ -79,39 +79,39 @@ export const dialogsData = [
         incomingMessages: [
             {
                 type: 'incomming',
-                time: 'Aug 11, 1999 12:11:00',
+                time: 'Aug 11, 1999 14:11:20',
                 text: `Hi!`
             },
             {
                 type: 'incomming',
-                time: 'Aug 11, 1999 12:12:38',
+                time: 'Aug 11, 1999 14:12:38',
                 text: `Where have you been for so long time?`
             },
             {
                 type: 'incomming',
-                time: 'Aug 11, 1999 12:15:18',
+                time: 'Aug 11, 1999 14:15:18',
                 text: `And how is India? )`
             },
             {
                 type: 'incomming',
-                time: 'Aug 11, 1999 12:20:35',
+                time: 'Aug 11, 1999 14:20:35',
                 text: `Ok. I can even catch the last plane today to Delhi )`
             },
         ],
         outcomingMessages: [
             {
                 type: 'outcomming',
-                time: 'Aug 11, 1999 12:05:00',
+                time: 'Aug 10, 1999 23:05:08',
                 text: `Hello!`
             },
             {
                 type: 'outcomming',
-                time: 'Aug 11, 1999 12:14:06',
+                time: 'Aug 11, 1999 14:14:06',
                 text: `I've been in India.`
             },
             {
                 type: 'outcomming',
-                time: 'Aug 11, 1999 12:18:32',
+                time: 'Aug 11, 1999 14:18:32',
                 text: `Fantastic! But you better see it yourself.`
             },
         ],
@@ -124,29 +124,29 @@ export const dialogsData = [
         incomingMessages: [
             {
                 type: 'incomming',
-                time: 'Jun 1, 2022 18:23:00',
+                time: 'Jun 1, 2022 23:23:00',
                 text: `Hi, I've got a question.`
             },
             {
                 type: 'incomming',
-                time: 'Jun 1, 2022 18:23:13',
+                time: 'Jun 1, 2022 23:23:13',
                 text: `What is your favourite color?`
             },
             {
                 type: 'incomming',
-                time: 'Jun 1, 2022 18:25:43',
+                time: 'Jun 1, 2022 23:45:43',
                 text: `I choose a car for you on your birthday :)`
             },
         ],
         outcomingMessages: [
             {
                 type: 'outcomming',
-                time: 'Jun 1, 2022 18:24:07',
+                time: 'Jun 1, 2022 23:34:07',
                 text: `Hi! Mmm... Orange. But... why?`
             },
             {
                 type: 'outcomming',
-                time: 'Jun 1, 2022 18:26:25',
+                time: 'Jun 2, 2022 00:13:25',
                 text: `WHAT?!!!!`
             },
         ],
@@ -164,7 +164,7 @@ export const dialogsData = [
             {
                 type: 'incomming',
                 time: 'Jul 3, 2014 14:08:23',
-                text: `Little bit later. In five minutes, ok?`
+                text: `Little bit later. In several minutes, ok?`
             },
             {
                 type: 'incomming',
@@ -221,34 +221,34 @@ export const dialogsData = [
         incomingMessages: [
             {
                 type: 'incomming',
-                time: 'Aug 11, 2022 12:00:18',
+                time: 'Nov 11, 2018 23:24:18',
                 text: `Hi, how is life?`
             },
             {
                 type: 'incomming',
-                time: 'Aug 11, 2022 12:12:52',
+                time: 'Nov 12, 2018 00:12:52',
                 text: `That's great! Are you happy? )`
             },
             {
                 type: 'incomming',
-                time: 'Aug 11, 2022 12:15:03',
+                time: 'Nov 12, 2018 00:15:03',
                 text: `So come on! Conquer the whole world with your music!`
             },
         ],
         outcomingMessages: [
             {
                 type: 'outcomming',
-                time: 'Aug 11, 2022 12:05:23',
-                text: `I'm fine!`
+                time: 'Nov 11, 2018 23:25:23',
+                text: `Hi! I'm fine!`
             },
             {
                 type: 'outcomming',
-                time: 'Aug 11, 2022 12:07:39',
+                time: 'Nov 11, 2018 23:46:39',
                 text: `I've bought a new guitar!`
             },
             {
                 type: 'outcomming',
-                time: 'Aug 11, 2022 12:13:28',
+                time: 'Nov 12, 2018 00:13:28',
                 text: `Oh, year! I've been thinking about it for years. And now I'm really happy!`
             },
         ],

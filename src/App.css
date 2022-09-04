@@ -3,12 +3,14 @@
 
 :root {
   --base-color: #111;
-  --base-bg-color: #fffff7;
   --base-light-color: #fff;
-  --semi-grey-color: hsl(50, 10%, 50%);
-  --user-data-color: var(--semi-grey-color);
+  --base-bg-color: #fffff7;
   --header-bg-color: hsl(170, 90%, 25%);
   --sidebar-bg-color: hsl(60, 55%, 86%);
+  --incom-msg-bg-color: hsl(60, 100%, 88%);
+  --outcom-msg-bg-color: hsl(100, 80%, 90%);
+  --semi-grey-color: hsl(50, 10%, 50%);
+  --user-data-color: var(--semi-grey-color);
   --main-title-color: var(--header-bg-color);
   --links-hover-color: hsl(170, 60%, 40%);
   --links-active-color: hsl(20, 100%, 45%);
