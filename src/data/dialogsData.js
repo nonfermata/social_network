@@ -2,7 +2,7 @@ export const dialogsData = [
     {
         id: '1',
         name: 'John',
-        avaURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEqDEIPAxaIU5pwkbs7CiS29TVmrBk2a5wBQ&usqp=CAU',
+        avaURL: 'https://i.discogs.com/1mToqrGaGlnG_mO_58LgFdpFEvb60e2bYFMrZzeUu7g/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyODY2MjY2MDEu/anBlZw.jpeg',
         incomingMessages: [
             {
                 type: 'incomming',
@@ -159,7 +159,7 @@ export const dialogsData = [
     {
         id: '5',
         name: 'Dolores',
-        avaURL: 'https://www.gala.fr/imgre/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgal.2Fvar.2Fgal.2Fstorage.2Fimages.2Fmedia.2Fmultiupload_du_10_novembre_2014.2Fdolores-o_riordan.2F3170340-1-fre-FR.2Fdolores-o_riordan.2Ejpg/480x480/quality/80/dolores-o-riordan-a-perdu-pied.jpg',
+        avaURL: 'https://www.dagbladet.no/images/70180234.jpg?imageId=70180234&panow=100&panoh=48.514851485149&panox=0&panoy=26.732673267327&heightw=44.649446494465&heighth=100&heightx=39.114391143911&heighty=0&width=1200&height=1200',
         incomingMessages: [
             {
                 type: 'incomming',
@@ -222,7 +222,7 @@ export const dialogsData = [
     {
         id: '7',
         name: 'Suzanne',
-        avaURL: 'https://www.eventworld.co/blob/images/pg/suzanne-vega_b60e0_500.jpg',
+        avaURL: 'https://secondhandsongs.com/picture/175050',
         incomingMessages: [
             {
                 type: 'incomming',

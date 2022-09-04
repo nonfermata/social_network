@@ -30,4 +30,15 @@
     transition: all .15s ease;
     font-weight: 500;
     color: var(--base-color);
+    position: relative;
+}
+
+.item a.active:after {
+    content: '>';
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    right: -20px;
+    color: var(--sidebar-bg-color);
+    transform: scaleY(1.5);
 }
