@@ -1,11 +1,11 @@
 import React from "react"
-import classes from "./MainContent.module.css"
+import classes from "./mainContent.module.css"
 import { Routes, Route } from "react-router-dom"
-import Profile from "./Profile/Profile"
-import Dialogs from "./Dialogs/Dialogs"
-import News from "./News/News"
-import Music from "./Music/Music"
-import Settings from "./Settings/Settings"
+import Profile from "./profile/profile"
+import Dialogs from "./dialogs/dialogs"
+import News from "./news/news"
+import Music from "./music/music"
+import Settings from "./settings/settings"
 
 const MainContent = () => {
     return (

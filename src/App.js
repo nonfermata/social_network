@@ -1,9 +1,9 @@
 import React from 'react'
 import './App.css'
-import Header from './components/Header/Header'
-import Sidebar from './components/Sidebar/Sidebar'
-import MainContent from "./components/MainContent/MainContent";
-import Footer from './components/Footer/Footer'
+import Header from './components/header/header'
+import Sidebar from './components/sidebar/sidebar'
+import MainContent from "./components/mainContent/mainContent";
+// import Footer from './components/footer/footer'
 import { BrowserRouter } from "react-router-dom"
 
 

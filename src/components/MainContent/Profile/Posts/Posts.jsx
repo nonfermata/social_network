@@ -1,8 +1,8 @@
 import React from 'react'
-import ReleasedPost from './ReleasedPost/ReleasedPost'
-import classes from './Posts.module.css'
-import NewPost from "./NewPost/NewPost";
-import {postsData} from "../../../../data/postsData";
+import ReleasedPost from './releasedPost/releasedPost'
+import classes from './posts.module.css'
+import NewPost from "./newPost/newPost";
+import { postsData } from "../../../../data/postsData";
 
 const postsItems = postsData.map(el => {
     return <ReleasedPost
@@ -10,7 +10,7 @@ const postsItems = postsData.map(el => {
         avaURL={el.avaURL}
         postText={el.postText}
         numberOfLikes={el.numberOfLikes}
-        />
+    />
 })
 
 const Posts = () => {

@@ -1,20 +1,20 @@
 import React from 'react'
-import {Route, Routes} from 'react-router-dom'
-import classes from './Dialogs.module.css'
-import DialogsList from "./DialogsList/DialogsList";
-import Separator from "./Separator/Separator";
-import ActiveDialog from "./ActiveDialog/ActiveDialog";
-import {dialogsData} from "../../../data/dialogsData";
+import { Route, Routes } from 'react-router-dom'
+import classes from './dialogs.module.css'
+import DialogsList from "./dialogsList/dialogsList";
+import Separator from "./separator/separator";
+import ActiveDialog from "./activeDialog/activeDialog";
+import { dialogsData } from "../../../data/dialogsData";
 
 const routeElements = dialogsData.map(el => {
     return <Route
+        key={el.id}
         path={el.id}
         element={
             <ActiveDialog
                 name={el.name}
                 avaURL={el.avaURL}
-                incom={el.incomingMessages}
-                outcom={el.outcomingMessages}
+                messages={el.messages}
             />}
     />
 })
@@ -22,8 +22,8 @@ const routeElements = dialogsData.map(el => {
 const Dialogs = props => {
     return (
         <div className={classes.dialogs}>
-            <DialogsList/>
-            <Separator/>
+            <DialogsList />
+            <Separator />
             <Routes>
                 {routeElements}
             </Routes>

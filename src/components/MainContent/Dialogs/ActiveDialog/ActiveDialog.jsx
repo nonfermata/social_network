@@ -1,23 +1,21 @@
 import React from "react"
-import classes from "./ActiveDialog.module.css"
-import { user } from "../../../../data/userData";
+import classes from "./activeDialog.module.css"
+import {user} from "../../../../data/userData";
 
 let previousDate = ''
 const ActiveDialog = props => {
-    const allMessages = props.incom.concat(props.outcom)
-    allMessages.sort((a, b) => Date.parse(a.time) - Date.parse(b.time))
-    const allMessagesHTML = allMessages.map(el => {
-        let messageClass, messageWrapClass, avatar, avatarClass
-        if (el.type === 'incomming') {
+    const messages = props.messages.map(el => {
+        let messageClass, messageWrapClass, avatarURL, avatarClass
+        if (el.type === 'outgoing') {
+            messageClass = classes.outgoingMessage
+            messageWrapClass = classes.outgoingMessageWrap
+            avatarURL = user.avatar
+            avatarClass = classes.avatar
+        } else if (el.type === 'incoming') {
             messageClass = classes.incomingMessage
             messageWrapClass = classes.incomingMessageWrap
-            avatar = props.avaURL
+            avatarURL = props.avaURL
             avatarClass = classes.avatar + ' ' + classes.avatarRight
-        } else {
-            messageClass = classes.outcomingMessage
-            messageWrapClass = classes.outcomingMessageWrap
-            avatar = user.avatar
-            avatarClass = classes.avatar
         }
 
         const timeArr = el.time.split(' ')  // get time (without seconds)
@@ -32,13 +30,13 @@ const ActiveDialog = props => {
             dateClass = classes.date
         }
 
-        return (
-            <div>
+        return (  // render one message
+            <div key={el.id}>
                 <div className={dateClass}>
                     {dateStr}
                 </div>
                 <div className={messageWrapClass}>
-                    <img className={avatarClass} src={avatar} alt="avatar" />
+                    <img className={avatarClass} src={avatarURL} alt="avatar"/>
                     <div className={messageClass}>
                         {el.text}
                         <div className={classes.time}>
@@ -51,7 +49,7 @@ const ActiveDialog = props => {
     })
     return (
         <div className={classes.activeDialog}>
-            {allMessagesHTML}
+            {messages}
         </div>
     )
 }

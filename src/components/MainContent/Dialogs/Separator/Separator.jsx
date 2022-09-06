@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Separator.module.css";
+import classes from "./separator.module.css";
 
 const Separator = () => {
     return (

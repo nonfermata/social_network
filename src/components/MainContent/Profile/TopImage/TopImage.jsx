@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './TopImage.module.css'
+import classes from './topImage.module.css'
 
 const TopImage = () => {
     return (

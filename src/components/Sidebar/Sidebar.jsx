@@ -1,6 +1,6 @@
 import React from 'react'
-import Menu from './Menu/Menu'
-import classes from './Sidebar.module.css'
+import Menu from './menu/menu'
+import classes from './sidebar.module.css'
 
 const Sidebar = () => {
     return (

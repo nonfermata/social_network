@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './UserData.module.css'
+import classes from './userData.module.css'
 
 const UserData = props => {
     return (

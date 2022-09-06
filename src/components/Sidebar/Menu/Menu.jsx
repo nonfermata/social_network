@@ -1,6 +1,6 @@
 import React from "react"
 import {NavLink} from "react-router-dom"
-import classes from './Menu.module.css'
+import classes from './menu.module.css'
 
 const Menu = props => {
     return (

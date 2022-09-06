@@ -1,5 +1,5 @@
 import React from "react"
-import classes from './Released.module.css'
+import classes from './releasedPost.module.css'
 import likeAva from '../../../../../data/assets/like-icon.png'
 
 const ReleasedPost = props => {
