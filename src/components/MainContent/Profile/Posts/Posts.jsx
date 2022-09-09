@@ -7,7 +7,7 @@ import { postsData } from "../../../../data/postsData";
 const postsItems = postsData.map(el => {
     return <ReleasedPost
         id={el.id}
-        avaURL={el.avaURL}
+        avatarURL={el.avatarURL}
         postText={el.postText}
         numberOfLikes={el.numberOfLikes}
     />

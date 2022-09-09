@@ -1,20 +1,20 @@
 import React from "react"
 import classes from "./activeDialog.module.css"
-import {user} from "../../../../data/userData";
+import { user } from "../../../../data/userData";
 
 let previousDate = ''
-const ActiveDialog = props => {
-    const messages = props.messages.map(el => {
-        let messageClass, messageWrapClass, avatarURL, avatarClass
+const ActiveDialog = ({ avatarURL, messages }) => {
+    const messagesHTML = messages.map(el => {
+        let messageClass, messageWrapClass, avatarHTML, avatarClass
         if (el.type === 'outgoing') {
             messageClass = classes.outgoingMessage
             messageWrapClass = classes.outgoingMessageWrap
-            avatarURL = user.avatar
+            avatarHTML = user.profileAvatarURL
             avatarClass = classes.avatar
         } else if (el.type === 'incoming') {
             messageClass = classes.incomingMessage
             messageWrapClass = classes.incomingMessageWrap
-            avatarURL = props.avaURL
+            avatarHTML = avatarURL
             avatarClass = classes.avatar + ' ' + classes.avatarRight
         }
 
@@ -36,7 +36,7 @@ const ActiveDialog = props => {
                     {dateStr}
                 </div>
                 <div className={messageWrapClass}>
-                    <img className={avatarClass} src={avatarURL} alt="avatar"/>
+                    <img className={avatarClass} src={avatarHTML} alt="avatar" />
                     <div className={messageClass}>
                         {el.text}
                         <div className={classes.time}>
@@ -49,7 +49,7 @@ const ActiveDialog = props => {
     })
     return (
         <div className={classes.activeDialog}>
-            {messages}
+            {messagesHTML}
         </div>
     )
 }

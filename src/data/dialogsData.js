@@ -2,7 +2,7 @@ export const dialogsData = [
     {
         id: '1',
         name: 'John',
-        avaURL: 'https://i.discogs.com/1mToqrGaGlnG_mO_58LgFdpFEvb60e2bYFMrZzeUu7g/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyODY2MjY2MDEu/anBlZw.jpeg',
+        avatarURL: 'https://i.discogs.com/1mToqrGaGlnG_mO_58LgFdpFEvb60e2bYFMrZzeUu7g/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyODY2MjY2MDEu/anBlZw.jpeg',
         messages: [
             {
                 id: '1',
@@ -45,7 +45,7 @@ export const dialogsData = [
     {
         id: '2',
         name: 'Paul',
-        avaURL: 'https://lefthanderslegacy.org/wp-content/uploads/2018/07/Paul-McCartney.jpg',
+        avatarURL: 'https://lefthanderslegacy.org/wp-content/uploads/2018/07/Paul-McCartney.jpg',
         messages: [
             {
                 id: '1',
@@ -88,7 +88,7 @@ export const dialogsData = [
     {
         id: '3',
         name: 'George',
-        avaURL: 'https://iscale.iheart.com/catalog/artist/29143',
+        avatarURL: 'https://iscale.iheart.com/catalog/artist/29143',
         messages: [
             {
                 id: '1',
@@ -138,7 +138,7 @@ export const dialogsData = [
     {
         id: '4',
         name: 'Ringo',
-        avaURL: 'https://d2kdkfqxnvpuu9.cloudfront.net/images/big/74628.jpg?1475075592',
+        avatarURL: 'https://d2kdkfqxnvpuu9.cloudfront.net/images/big/74628.jpg?1475075592',
         messages: [
             {
                 id: '1',
@@ -175,7 +175,7 @@ export const dialogsData = [
     {
         id: '5',
         name: 'Dolores',
-        avaURL: 'https://www.dagbladet.no/images/70180234.jpg?imageId=70180234&panow=100&panoh=48.514851485149&panox=0&panoy=26.732673267327&heightw=44.649446494465&heighth=100&heightx=39.114391143911&heighty=0&width=1200&height=1200',
+        avatarURL: 'https://www.dagbladet.no/images/70180234.jpg?imageId=70180234&panow=100&panoh=48.514851485149&panox=0&panoy=26.732673267327&heightw=44.649446494465&heighth=100&heightx=39.114391143911&heighty=0&width=1200&height=1200',
         messages: [
             {
                 id: '1',
@@ -218,7 +218,7 @@ export const dialogsData = [
     {
         id: '6',
         name: 'Sting',
-        avaURL: 'https://i.discogs.com/0SNA0qJGLPxqLjNlPYtFQ06TpithNK3jLUZaP98tpXE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU4Njk4/MC0xMTczMzg3OTg4/LmpwZWc.jpeg',
+        avatarURL: 'https://i.discogs.com/0SNA0qJGLPxqLjNlPYtFQ06TpithNK3jLUZaP98tpXE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU4Njk4/MC0xMTczMzg3OTg4/LmpwZWc.jpeg',
         messages: [
             {
                 id: '1',
@@ -255,7 +255,7 @@ export const dialogsData = [
     {
         id: '7',
         name: 'Suzanne',
-        avaURL: 'https://secondhandsongs.com/picture/175050',
+        avatarURL: 'https://secondhandsongs.com/picture/175050',
         messages: [
             {
                 id: '1',

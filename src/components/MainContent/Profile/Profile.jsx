@@ -5,13 +5,13 @@ import UserData from './userData/userData'
 import Posts from './posts/posts'
 import { user } from "../../../data/userData";
 
-const Content = () => {
+const Profile = () => {
     return (
         <div className={classes.profile}>
             <TopImage />
             <div className={classes.content}>
                 <UserData
-                    avatar={user.avatar}
+                    profileAvatarURL={user.profileAvatarURL}
                     name={user.name}
                     dateOfBirth={user.dateOfBirth}
                     city={user.city}
@@ -24,4 +24,4 @@ const Content = () => {
     )
 }
 
-export default Content
+export default Profile

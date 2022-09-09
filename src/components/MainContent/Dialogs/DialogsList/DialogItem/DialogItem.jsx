@@ -2,13 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import classes from "./dialogItem.module.css";
 
-const DialogItem = props => {
-    let path = "/dialogs/" + props.id
+const DialogItem = ({ id, avatarURL, name }) => {
+    let path = "/dialogs/" + id
     return (
         <li className={classes.item}>
-            <img src={props.avaURL} alt="avatar" />
+            <img src={avatarURL} alt="avatar" />
             <NavLink to={path} className={link => link.isActive ? classes.active : null}>
-                {props.name}
+                {name}
             </NavLink>
         </li>
     )

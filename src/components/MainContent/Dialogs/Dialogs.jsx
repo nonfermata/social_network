@@ -13,13 +13,13 @@ const routeElements = dialogsData.map(el => {
         element={
             <ActiveDialog
                 name={el.name}
-                avaURL={el.avaURL}
+                avatarURL={el.avatarURL}
                 messages={el.messages}
             />}
     />
 })
 
-const Dialogs = props => {
+const Dialogs = () => {
     return (
         <div className={classes.dialogs}>
             <DialogsList />
