@@ -3,7 +3,7 @@ import classes from './profile.module.css'
 import TopImage from './topImage/topImage'
 import UserData from './userData/userData'
 import Posts from './posts/posts'
-import { user } from "../../../data/userData";
+import { mainUser } from "../../../data/mainUserData";
 
 const Profile = () => {
     return (
@@ -11,12 +11,12 @@ const Profile = () => {
             <TopImage />
             <div className={classes.content}>
                 <UserData
-                    profileAvatarURL={user.profileAvatarURL}
-                    name={user.name}
-                    dateOfBirth={user.dateOfBirth}
-                    city={user.city}
-                    website={user.website}
-                    phone={user.phone}
+                    profileAvatarURL={mainUser.profileAvatarURL}
+                    name={mainUser.name}
+                    dateOfBirth={mainUser.dateOfBirth}
+                    city={mainUser.city}
+                    website={mainUser.website}
+                    phone={mainUser.phone}
                 />
                 <Posts />
             </div>

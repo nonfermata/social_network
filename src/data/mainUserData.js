@@ -1,6 +1,6 @@
 import avatar from './assets/avatar.png'
 
-export const user = {
+export const mainUser = {
     profileAvatarURL: avatar,
     name: "Dmitry Baulin",
     dateOfBirth: "10.09.1975",

@@ -1,20 +1,18 @@
 import React from "react"
 import classes from "./dialogsList.module.css"
 import DialogItem from "./dialogItem/dialogItem";
-import { dialogsData } from "../../../../data/dialogsData";
-
-const dialogsItems = dialogsData.map(el => {
-    return <DialogItem
-        key={el.id}
-        name={el.name}
-        id={el.id}
-        avatarURL={el.avatarURL} />
-})
+import {dialogs} from "../../../../data/dialogs";
 
 const DialogsList = () => {
     return (
         <ul className={classes.dialogsList}>
-            {dialogsItems}
+            {dialogs.map(friend => (
+                <DialogItem
+                    key={friend.id}
+                    name={friend.name}
+                    id={friend.id}
+                    avatarURL={friend.avatarURL}/>
+            ))}
         </ul>
     )
 }

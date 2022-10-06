@@ -10,7 +10,7 @@ const UserData = ({ profileAvatarURL, name, dateOfBirth, city, website, phone })
                 <h1 className={tittleName}>{name}</h1>
                 <p>Date of birth: <span className={value}>{dateOfBirth}</span></p>
                 <p>City: <span className={value}>{city}</span></p>
-                <div class={contacts}>
+                <div className={contacts}>
                     <p>Web-site: <span className={value}>{website}</span></p>
                     <p>Telephon: <span className={value}>{phone}</span></p>
                 </div>

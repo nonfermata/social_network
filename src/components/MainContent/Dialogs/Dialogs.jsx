@@ -1,31 +1,30 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import {Route, Routes} from 'react-router-dom'
 import classes from './dialogs.module.css'
 import DialogsList from "./dialogsList/dialogsList";
 import Separator from "./separator/separator";
 import ActiveDialog from "./activeDialog/activeDialog";
-import { dialogsData } from "../../../data/dialogsData";
-
-const routeElements = dialogsData.map(el => {
-    return <Route
-        key={el.id}
-        path={el.id}
-        element={
-            <ActiveDialog
-                name={el.name}
-                avatarURL={el.avatarURL}
-                messages={el.messages}
-            />}
-    />
-})
+import {dialogs} from "../../../data/dialogs";
 
 const Dialogs = () => {
     return (
         <div className={classes.dialogs}>
-            <DialogsList />
-            <Separator />
+            <DialogsList/>
+            <Separator/>
             <Routes>
-                {routeElements}
+                {dialogs.map((item) => (
+                    <Route
+                        key={item.id}
+                        path={item.id}
+                        element={
+                            <ActiveDialog
+                                name={item.name}
+                                friendAvatarURL={item.avatarURL}
+                                messages={item.messages}
+                            />
+                        }
+                    />
+                ))}
             </Routes>
         </div>
     )

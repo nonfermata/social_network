@@ -2,35 +2,17 @@ import React from "react"
 import {NavLink} from "react-router-dom"
 import classes from './menu.module.css'
 
-const Menu = props => {
+const Menu = ({menu}) => {
     return (
         <nav>
             <ul className={classes.menu}>
-                <li className={classes.item}>
-                    <NavLink to="/profile" className={link => link.isActive ? classes.active : null}>
-                        profile
-                    </NavLink>
-                </li>
-                <li className={classes.item}>
-                    <NavLink to="/dialogs" className={link => link.isActive ? classes.active : null}>
-                        dialogs
-                    </NavLink>
-                </li>
-                <li className={classes.item}>
-                    <NavLink to="/news" className={link => link.isActive ? classes.active : null}>
-                        news
-                    </NavLink>
-                </li>
-                <li className={classes.item}>
-                    <NavLink to="/music" className={link => link.isActive ? classes.active : null}>
-                        music
-                    </NavLink>
-                </li>
-                <li className={classes.item}>
-                    <NavLink to="/settings" className={link => link.isActive ? classes.active : null}>
-                        settings
-                    </NavLink>
-                </li>
+                {menu.map((item) => (
+                    <li key={item.id} className={classes.item}>
+                        <NavLink to={"/" + item.name} className={link => link.isActive ? classes.active : null}>
+                            {item.name}
+                        </NavLink>
+                    </li>
+                ))}
             </ul>
         </nav>
     )

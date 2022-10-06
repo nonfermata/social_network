@@ -1,6 +1,6 @@
-export const dialogsData = [
+export const dialogs = [
     {
-        id: '1',
+        id: '9253678001',
         name: 'John',
         avatarURL: 'https://i.discogs.com/1mToqrGaGlnG_mO_58LgFdpFEvb60e2bYFMrZzeUu7g/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyODY2MjY2MDEu/anBlZw.jpeg',
         messages: [
@@ -43,7 +43,7 @@ export const dialogsData = [
         ],
     },
     {
-        id: '2',
+        id: '9253678002',
         name: 'Paul',
         avatarURL: 'https://lefthanderslegacy.org/wp-content/uploads/2018/07/Paul-McCartney.jpg',
         messages: [
@@ -86,7 +86,7 @@ export const dialogsData = [
         ],
     },
     {
-        id: '3',
+        id: '9253678003',
         name: 'George',
         avatarURL: 'https://iscale.iheart.com/catalog/artist/29143',
         messages: [
@@ -136,7 +136,7 @@ export const dialogsData = [
 
     },
     {
-        id: '4',
+        id: '9253678004',
         name: 'Ringo',
         avatarURL: 'https://d2kdkfqxnvpuu9.cloudfront.net/images/big/74628.jpg?1475075592',
         messages: [
@@ -173,7 +173,7 @@ export const dialogsData = [
         ],
     },
     {
-        id: '5',
+        id: '9253678005',
         name: 'Dolores',
         avatarURL: 'https://www.dagbladet.no/images/70180234.jpg?imageId=70180234&panow=100&panoh=48.514851485149&panox=0&panoy=26.732673267327&heightw=44.649446494465&heighth=100&heightx=39.114391143911&heighty=0&width=1200&height=1200',
         messages: [
@@ -216,7 +216,7 @@ export const dialogsData = [
         ],
     },
     {
-        id: '6',
+        id: '9253678006',
         name: 'Sting',
         avatarURL: 'https://i.discogs.com/0SNA0qJGLPxqLjNlPYtFQ06TpithNK3jLUZaP98tpXE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU4Njk4/MC0xMTczMzg3OTg4/LmpwZWc.jpeg',
         messages: [
@@ -253,7 +253,7 @@ export const dialogsData = [
         ],
     },
     {
-        id: '7',
+        id: '9253678007',
         name: 'Suzanne',
         avatarURL: 'https://secondhandsongs.com/picture/175050',
         messages: [
