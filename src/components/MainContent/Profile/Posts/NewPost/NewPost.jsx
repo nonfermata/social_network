@@ -1,13 +1,19 @@
 import React from "react"
 import classes from './newPost.module.css'
 
-const NewPost = props => {
+const NewPost = ({placeholder, addPost}) => {
+    const newPost = React.createRef()
+    const addNewPost = () => {
+        const text = newPost.current.value
+        newPost.current.value = ""
+        addPost(text)
+    }
     return (
-        <form className={classes.newPost} action={props.action} method="post">
-            <textarea className={classes.newPost__textarea} placeholder={props.placeholder} name={props.name}>
+        <div className={classes.newPost}>
+            <textarea className={classes.newPost__textarea} placeholder={placeholder} ref={newPost}>
             </textarea>
-            <input className={classes.newPost__submitButton} type="submit" value="Send"/>
-        </form>
+                <button onClick={addNewPost} className={classes.newPost__submitButton}>Send</button>
+        </div>
     )
 }
 

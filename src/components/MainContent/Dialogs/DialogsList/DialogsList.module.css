@@ -2,3 +2,48 @@
     padding: 10px 25px;
     list-style: none;
 }
+
+.person {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.person:last-child {
+    margin-bottom: 0;
+}
+
+.person img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--main-border-color);
+    border-radius: 30%;
+}
+
+.person a {
+    color: var(--semi-grey-color);
+    text-decoration: none;
+}
+
+.person a:hover {
+    color: var(--base-color);
+}
+
+.person a.active {
+    font-size: 1.07em;
+    transition: all .15s ease;
+    font-weight: 500;
+    color: var(--base-color);
+    position: relative;
+}
+
+.person a.active:after {
+    content: '>';
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    right: -20px;
+    color: var(--sidebar-bg-color);
+    transform: scaleY(1.5);
+}

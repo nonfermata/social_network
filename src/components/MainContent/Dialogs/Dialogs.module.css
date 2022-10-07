@@ -4,3 +4,8 @@
     padding: 25px 0;
 }
 
+.separator {
+    background-color: var(--sidebar-bg-color);
+    width: 2px;
+}
+

@@ -1,7 +1,7 @@
 .newPost {
     display: flex;
     flex-wrap: wrap;
-    justify-content: end;
+    justify-content: flex-end;
     margin: 15px auto 25px;
 }
 

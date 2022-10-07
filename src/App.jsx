@@ -7,13 +7,17 @@ import MainContent from "./components/mainContent/mainContent";
 import { BrowserRouter } from "react-router-dom"
 
 
-const App = props => {
+const App = ({state, dialogs, posts}) => {
     return (
         <BrowserRouter>
             <div className="container">
                 <Header />
-                <Sidebar />
-                <MainContent />
+                <Sidebar menu={state.menu}/>
+                <MainContent
+                    profile={state.profile}
+                    posts={posts}
+                    dialogs={dialogs}
+                />
                 {/*<Footer />*/}
             </div>
         </BrowserRouter>

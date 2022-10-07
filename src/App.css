@@ -44,7 +44,7 @@ body {
   width: 90%;
   border: 1px solid var(--main-border-color);
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   grid-template-columns: 2fr 10fr;
   grid-template-rows: 80px;
   grid-template-areas:
