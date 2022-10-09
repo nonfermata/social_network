@@ -1,3 +1,23 @@
+import avatar from "../assets/avatar.png";
+
+let newRender = () => {}
+
+export const sendRenderAllToPosts = (observer) => {
+    newRender = observer
+}
+
+export const addNewPost = (text) => {
+    const newPost = {
+        id: posts[0].id + 1,
+        postNumber: posts[0].postNumber + 1,
+        avatarURL: avatar,
+        postText: text,
+        numberOfLikes: 0
+    }
+    posts.unshift(newPost)
+    newRender()
+}
+
 export const posts = [
     {
         id: 785643904,
@@ -28,4 +48,3 @@ export const posts = [
         numberOfLikes: '22',
     }
 ]
-

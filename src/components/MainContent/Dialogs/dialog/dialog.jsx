@@ -1,8 +1,27 @@
-import React from "react"
+import React, {useState} from "react"
 import classes from "./dialog.module.css"
 import Message from "./message";
+import moment from "moment";
+import {addMessage, deleteMessage} from "../../../../redux/stateDialogs";
 
-const Dialog = ({friendAvatarURL, messages, profileAvatarURL}) => {
+const Dialog = ({friendId, messages, friendAvatarURL, profileAvatarURL}) => {
+    const [newMessageText, setNewMessageText] = useState("")
+    const newMessage = React.createRef()
+    const startNewMessage = () => {
+        if (newMessageText.trim()) {
+            const time = moment().format("MMM D, YYYY HH:mm:ss");
+            addMessage(newMessageText, time, friendId)
+        }
+            setNewMessageText("")
+    }
+    const onTextMessageChange = () => {
+        setNewMessageText(newMessage.current.value)
+    }
+
+    const onDeleteMessage = (messageId) => {
+        deleteMessage(messageId, friendId)
+    }
+
     let previousDate
     return (
         <div className={classes.activeDialog}>
@@ -12,7 +31,7 @@ const Dialog = ({friendAvatarURL, messages, profileAvatarURL}) => {
                 timeArray.pop()
                 const dateString = timeArray.join(' ')  // get date string
 
-                let dateClass = classes.date + ' ' + classes.dateHidden
+                let dateClass = classes.date + ' ' + classes.hidden
                 if (dateString !== previousDate) {
                     previousDate = dateString
                     dateClass = classes.date
@@ -27,9 +46,26 @@ const Dialog = ({friendAvatarURL, messages, profileAvatarURL}) => {
                         dateClass={dateClass}
                         friendAvatarURL={friendAvatarURL}
                         profileAvatarURL={profileAvatarURL}
+                        onDeleteMessage={onDeleteMessage}
                     />
                 )
             })}
+            <div className={classes.newMessageWrap}>
+                <textarea
+                    className={classes.newMessage}
+                    onChange={onTextMessageChange}
+                    ref={newMessage}
+                    placeholder="write new message here..."
+                    value={newMessageText}
+                />
+                <button
+                    className={classes.newMessageSubmitButton}
+                    onClick={startNewMessage}
+                    title="Send message"
+                >
+                    &#10148;
+                </button>
+            </div>
         </div>
     )
 }

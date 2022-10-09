@@ -40,10 +40,9 @@
 
 .person a.active:after {
     content: '>';
-    font-weight: 700;
     position: absolute;
     top: 0;
     right: -20px;
-    color: var(--sidebar-bg-color);
-    transform: scaleY(1.5);
+    color: var(--active-dialog-arrow-color);
+    transform: scaleY(1.4) scaleX(.8);
 }

@@ -19,7 +19,7 @@ const Dialogs = ({dialogs, profileAvatarURL}) => {
                         path={item.name}
                         element={
                             <Dialog
-                                name={item.name}
+                                friendId={item.id}
                                 friendAvatarURL={item.avatarURL}
                                 messages={item.messages}
                                 profileAvatarURL={profileAvatarURL}

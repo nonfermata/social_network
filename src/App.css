@@ -3,11 +3,14 @@
 :root {
   --base-color: #111;
   --base-light-color: #fff;
-  --base-bg-color: #fffff7;
+  --base-bg-color: #fffff5;
   --header-bg-color: hsl(170, 90%, 25%);
-  --sidebar-bg-color: hsl(60, 55%, 86%);
+  --sidebar-bg-color: hsl(60, 40%, 90%);
+  --active-dialog-arrow-color: hsl(60, 40%, 80%);
   --incom-msg-bg-color: hsl(60, 100%, 88%);
   --outcom-msg-bg-color: hsl(100, 80%, 90%);
+  --extra-light-grey-color: hsl(50, 10%, 95%);
+  --light-grey-color: hsl(50, 10%, 70%);
   --semi-grey-color: hsl(50, 10%, 50%);
   --user-data-color: var(--semi-grey-color);
   --main-title-color: var(--header-bg-color);

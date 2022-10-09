@@ -1,12 +1,16 @@
-import React from 'react'
-import reactDom from 'react-dom/client'
-import App from './App'
+import React from "react";
+import reactDom from "react-dom/client";
+import App from "./App";
 import {state} from "./redux/state";
-import  {posts} from "./redux/statePosts";
-import {dialogs} from "./redux/stateDialogs";
-// import reportWebVitals from './reportWebVitals'
+import {posts, sendRenderAllToPosts} from "./redux/statePosts";
+import {dialogs, sendRenderAllToDialogs} from "./redux/stateDialogs";
 
 const root = reactDom.createRoot(document.getElementById('root'))
-root.render(<App state={state} posts={posts} dialogs={dialogs}/>)
+const renderAll = () => {
+    root.render(<App state={state} posts={posts} dialogs={dialogs}/>)
+}
 
-// reportWebVitals()
+renderAll()
+
+sendRenderAllToDialogs(renderAll)
+sendRenderAllToPosts(renderAll)
