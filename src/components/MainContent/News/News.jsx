@@ -1,11 +1,10 @@
 import React from 'react'
+import ComingSoon from "../../comingSoon/comingSoon";
 // import classes from './news.module.css'
 
 const News = props => {
     return (
-        <div>
-            News
-        </div>
+        <ComingSoon pageName="News" />
     )
 }
 

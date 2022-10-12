@@ -1,11 +1,10 @@
 import React from 'react'
+import ComingSoon from "../../comingSoon/comingSoon";
 // import classes from './settings.module.css'
 
 const Settings = props => {
     return (
-        <div>
-            Settings
-        </div>
+        <ComingSoon pageName="Settings" />
     )
 }
 
