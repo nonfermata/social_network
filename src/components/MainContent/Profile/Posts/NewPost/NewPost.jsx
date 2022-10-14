@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import classes from './newPost.module.css'
-import {addPostAction} from "../../../../../cotstants";
+import {addPostAction} from "../../../../../redux/postsReducer";
 
 const NewPost = ({addPost, placeholder}) => {
     const [newPostText, setNewPostText] = useState("")

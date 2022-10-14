@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import classes from "./dialog.module.css"
 import Message from "./message";
 import moment from "moment";
-import {addMessageAction, deleteMessageAction} from "../../../../cotstants";
+import {addMessageAction, deleteMessageAction} from "../../../../redux/dialogsReducer";
 
 const Dialog = ({friendId, messages, friendAvatarURL, profileAvatarURL, addMessage, deleteMessage}) => {
     const [newMessageText, setNewMessageText] = useState("")

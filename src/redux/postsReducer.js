@@ -1,5 +1,12 @@
 import profileAvatarURL from "../assets/profile-avatar.png";
 
+export const addPostAction = (text) => (
+    {
+        type: "ADD-POST",
+        text
+    }
+)
+
 const postsReducer = (state, action) => {
     if (action.type === "ADD-POST") {
         const newPost = {
