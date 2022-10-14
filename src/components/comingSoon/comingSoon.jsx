@@ -5,7 +5,7 @@ const ComingSoon = ({pageName}) => {
     return (
         <div className={classes.comingSoonWrap}>
             <h3>{pageName}</h3>
-            <p className={classes.comingMessage}><br/>Comming soon...</p>
+            <p className={classes.comingMessage}><br/>Coming soon...</p>
         </div>
     );
 };

@@ -10,7 +10,8 @@
   --incom-msg-bg-color: hsl(60, 100%, 88%);
   --outcom-msg-bg-color: hsl(100, 80%, 90%);
   --extra-light-grey-color: hsl(50, 10%, 95%);
-  --light-grey-color: hsl(50, 10%, 70%);
+  --light-grey-color: hsl(50, 10%, 75%);
+  --time-grey-color: hsl(50, 10%, 60%);
   --semi-grey-color: hsl(50, 10%, 50%);
   --user-data-color: var(--semi-grey-color);
   --main-title-color: var(--header-bg-color);

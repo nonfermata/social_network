@@ -2,15 +2,15 @@ import React, {useState} from "react"
 import classes from "./dialog.module.css"
 import Message from "./message";
 import moment from "moment";
-import {addMessage, deleteMessage} from "../../../../redux/stateDialogs";
+import {addMessageAction, deleteMessageAction} from "../../../../cotstants";
 
-const Dialog = ({friendId, messages, friendAvatarURL, profileAvatarURL}) => {
+const Dialog = ({friendId, messages, friendAvatarURL, profileAvatarURL, addMessage, deleteMessage}) => {
     const [newMessageText, setNewMessageText] = useState("")
     const newMessage = React.createRef()
     const startNewMessage = () => {
         if (newMessageText.trim()) {
             const time = moment().format("MMM D, YYYY HH:mm:ss");
-            addMessage(newMessageText, time, friendId)
+            addMessage(addMessageAction(newMessageText, time, friendId))
         }
             setNewMessageText("")
     }
@@ -19,7 +19,7 @@ const Dialog = ({friendId, messages, friendAvatarURL, profileAvatarURL}) => {
     }
 
     const onDeleteMessage = (messageId) => {
-        deleteMessage(messageId, friendId)
+        deleteMessage(deleteMessageAction(messageId, friendId))
     }
 
     let previousDate

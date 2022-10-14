@@ -8,4 +8,5 @@
 .comingMessage {
     font-size: 2em;
     font-weight: 300;
+    color: var(--semi-grey-color);
 }

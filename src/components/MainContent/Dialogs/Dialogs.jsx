@@ -4,16 +4,16 @@ import classes from './dialogs.module.css'
 import DialogsList from "./dialogsList/dialogsList";
 import Dialog from "./dialog/dialog";
 
-const Dialogs = ({dialogs, profileAvatarURL}) => {
+const Dialogs = ({state}) => {
     return (
         <div className={classes.dialogs}>
-            <DialogsList dialogs={dialogs}/>
+            <DialogsList dialogs={state.getDialogs()}/>
 
-            <div className={classes.separator}>  {/* vertical separator */}
+            <div className={classes.separator}>
             </div>
 
             <Routes>
-                {dialogs.map((item) => (
+                {state.getDialogs().map((item) => (
                     <Route
                         key={item.id}
                         path={item.name}
@@ -22,7 +22,9 @@ const Dialogs = ({dialogs, profileAvatarURL}) => {
                                 friendId={item.id}
                                 friendAvatarURL={item.avatarURL}
                                 messages={item.messages}
-                                profileAvatarURL={profileAvatarURL}
+                                profileAvatarURL={state.profileAvatarURL}
+                                addMessage={state.dispatch.bind(state)}
+                                deleteMessage={state.dispatch.bind(state)}
                             />
                         }
                     />

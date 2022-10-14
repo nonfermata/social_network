@@ -7,12 +7,12 @@ import News from "./news/news"
 import Music from "./music/music"
 import Settings from "./settings/settings"
 
-const MainContent = ({profile, posts, dialogs}) => {
+const MainContent = ({state}) => {
     return (
         <main className={classes.main}>
             <Routes>
-                <Route path="/profile" element={<Profile profile={profile} posts={posts}/>} />
-                <Route path="/dialogs/*" element={<Dialogs dialogs={dialogs} profileAvatarURL={profile.avatarURL}/>} />
+                <Route path="/profile" element={<Profile state={state}/>} />
+                <Route path="/dialogs/*" element={<Dialogs state={state}/>} />
                 <Route path="/news" element={<News/>} />
                 <Route path="/music" element={<Music/>} />
                 <Route path="/settings" element={<Settings/>} />

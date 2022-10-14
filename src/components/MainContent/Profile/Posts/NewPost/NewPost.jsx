@@ -1,13 +1,13 @@
 import React, {useState} from "react"
 import classes from './newPost.module.css'
-import {addNewPost} from "../../../../../redux/statePosts";
+import {addPostAction} from "../../../../../cotstants";
 
-const NewPost = ({placeholder}) => {
+const NewPost = ({addPost, placeholder}) => {
     const [newPostText, setNewPostText] = useState("")
     const newPost = React.createRef()
     const startNewPost = () => {
         if (newPostText.trim()) {
-            addNewPost(newPostText)
+            addPost(addPostAction(newPostText))
         }
             setNewPostText("")
     }
