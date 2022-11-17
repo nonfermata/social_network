@@ -1,3 +1,5 @@
+import moment from "moment";
+
 const initialState = [
     {
         _id: "287072122277",
@@ -347,11 +349,10 @@ const initialState = [
 const addMessage = "ADD_MESSAGE";
 const deleteMessage = "DELETE_MESSAGE";
 
-export const addMessageAction = (content, time, userId) => ({
+export const addMessageAction = (newMessage) => ({
     type: addMessage,
-    content,
-    time,
-    userId
+    content: newMessage.content,
+    userId: newMessage.userId
 });
 export const deleteMessageAction = (messageId) => ({
     type: deleteMessage,
@@ -367,7 +368,7 @@ const messagesReducer = (state = initialState, action) => {
             newState.push({
                 _id: String(Date.now()),
                 userId: action.userId,
-                created_at: action.time,
+                created_at: moment().format("MMM D, YYYY HH:mm:ss"),
                 content: action.content,
                 type: "outgoing"
             });

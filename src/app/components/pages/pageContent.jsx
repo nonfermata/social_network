@@ -6,6 +6,7 @@ import Music from "./music/music";
 import Settings from "./settings/settings";
 import DialogsContainer from "./dialogs/dialogsContainer";
 import ProfileContainer from "./profile/profileContainer";
+import Users from "./users/users";
 
 const PageContent = () => {
     return (
@@ -16,6 +17,7 @@ const PageContent = () => {
                 <Route path="/news" element={<News />} />
                 <Route path="/music" element={<Music />} />
                 <Route path="/settings" element={<Settings />} />
+                <Route path="/users" element={<Users />} />
             </Routes>
         </main>
     );

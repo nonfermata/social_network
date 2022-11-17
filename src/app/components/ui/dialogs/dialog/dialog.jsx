@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./dialog.module.css";
 import Message from "../message/message";
 import PropTypes from "prop-types";
-import AddNewMessageForm from "../addNewMessageForm/addNewMessageForm";
+import AddMessageForm from "../addMessageForm/addMessageForm";
 import getTimeAndDate from "../../../../utils/getTimeAndDate";
 
 const Dialog = ({
@@ -43,7 +43,7 @@ const Dialog = ({
                     />
                 );
             })}
-            <AddNewMessageForm addMessage={addMessage} userId={userId} />
+            <AddMessageForm addMessage={addMessage} userId={userId} />
         </div>
     );
 };

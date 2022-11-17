@@ -41,7 +41,7 @@ const addPost = "ADD_POST";
 
 export const addPostAction = (newPost) => ({
     type: addPost,
-    authorId: newPost.author,
+    authorId: newPost.authorId,
     title: newPost.title,
     content: newPost.content
 });

@@ -11,8 +11,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    addMessage: (content, time, userId) => {
-        dispatch(addMessageAction(content, time, userId));
+    addMessage: (newMessage) => {
+        dispatch(addMessageAction(newMessage));
     },
     deleteMessage: (messageId) => {
         dispatch(deleteMessageAction(messageId));

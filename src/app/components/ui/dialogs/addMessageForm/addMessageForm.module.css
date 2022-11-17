@@ -1,27 +1,11 @@
-.newMessageWrap {
+.addMessageForm {
     width: 100%;
     display: flex;
     align-items: flex-end;
     gap: 10px;
 }
 
-.newMessage {
-    display: block;
-    width: 100%;
-    height: 50px;
-    background-color: #fff;
-    margin-top: 20px;
-    padding: 5px 10px;
-    resize: none;
-    border: 1px solid var(--main-border-color);
-    border-radius: 4px;
-}
-
-.newMessage::placeholder {
-    color: var(--light-grey-color);
-}
-
-.newMessageSubmitButton {
+.addMessageButton {
     color: var(--base-light-color);
     padding: 5px 20px;
     margin-top: 10px;
@@ -33,11 +17,11 @@
     transition: ease all 0.1s;
 }
 
-.newMessageSubmitButton:hover {
+.addMessageButton:hover {
     opacity: 1;
 }
 
-.newMessageSubmitButton:active {
+.addMessageButton:active {
     color: var(--header-bg-color);
     opacity: 1;
     background: transparent;

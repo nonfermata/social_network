@@ -7,7 +7,7 @@ import TextareaField from "../../../common/form/textareaField";
 
 const AddPostForm = ({ users, addPost }) => {
     const newPostInitialState = {
-        author: "",
+        authorId: "",
         title: "",
         content: ""
     };
@@ -15,7 +15,7 @@ const AddPostForm = ({ users, addPost }) => {
 
     const onAddPost = (event) => {
         event.preventDefault();
-        if (newPost.author && newPost.title && newPost.content) {
+        if (newPost.authorId && newPost.title && newPost.content) {
             addPost(newPost);
             setNewPost(newPostInitialState);
         }
@@ -31,8 +31,8 @@ const AddPostForm = ({ users, addPost }) => {
     return (
         <form className={classes.addPostForm} onSubmit={onAddPost}>
             <SelectField
-                name="author"
-                value={newPost.author}
+                name="authorId"
+                value={newPost.authorId}
                 onChange={handleChange}
                 options={users}
                 defaultOption="Кто хочет написать новый пост?"
