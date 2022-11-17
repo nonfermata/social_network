@@ -349,20 +349,18 @@ const initialState = [
 const addMessage = "ADD_MESSAGE";
 const deleteMessage = "DELETE_MESSAGE";
 
-export const addMessageAction = (newMessage) => ({
+export const getAddMessageAction = (newMessage) => ({
     type: addMessage,
     content: newMessage.content,
     userId: newMessage.userId
 });
-export const deleteMessageAction = (messageId) => ({
+export const getDeleteMessageAction = (messageId) => ({
     type: deleteMessage,
     messageId
 });
 
 const messagesReducer = (state = initialState, action) => {
-    const newState = state.map((object) => ({
-        ...object
-    }));
+    const newState = state.map((item) => ({ ...item }));
     switch (action.type) {
         case addMessage:
             newState.push({
@@ -374,11 +372,9 @@ const messagesReducer = (state = initialState, action) => {
             });
             return newState;
         case deleteMessage:
-            return newState.filter(
-                (message) => message._id !== action.messageId
-            );
+            return state.filter((message) => message._id !== action.messageId);
         default:
-            return newState;
+            return state;
     }
 };
 

@@ -39,7 +39,7 @@ const initialState = [
 
 const addPost = "ADD_POST";
 
-export const addPostAction = (newPost) => ({
+export const getAddPostAction = (newPost) => ({
     type: addPost,
     authorId: newPost.authorId,
     title: newPost.title,

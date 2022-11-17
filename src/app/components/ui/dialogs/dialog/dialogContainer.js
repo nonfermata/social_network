@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import {
-    addMessageAction,
-    deleteMessageAction
+    getAddMessageAction,
+    getDeleteMessageAction
 } from "../../../../redux/messagesReducer";
 import Dialog from "./dialog";
 
@@ -12,10 +12,10 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
     addMessage: (newMessage) => {
-        dispatch(addMessageAction(newMessage));
+        dispatch(getAddMessageAction(newMessage));
     },
     deleteMessage: (messageId) => {
-        dispatch(deleteMessageAction(messageId));
+        dispatch(getDeleteMessageAction(messageId));
     }
 });
 

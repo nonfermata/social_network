@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { addPostAction } from "../../../redux/postsReducer";
+import { getAddPostAction } from "../../../redux/postsReducer";
 import Posts from "./posts";
 
 const mapStateToProps = (state) => ({
@@ -9,7 +9,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
     addPost: (newPost) => {
-        dispatch(addPostAction(newPost));
+        dispatch(getAddPostAction(newPost));
     }
 });
 

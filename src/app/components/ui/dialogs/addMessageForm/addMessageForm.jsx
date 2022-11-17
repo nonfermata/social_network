@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./addMessageForm.module.css";
 import PropTypes from "prop-types";
 import TextareaField from "../../../common/form/textareaField";
@@ -6,9 +6,12 @@ import TextareaField from "../../../common/form/textareaField";
 const AddMessageForm = ({ addMessage, userId }) => {
     const newMessageInitialState = {
         content: "",
-        userId: userId
+        userId
     };
-    const [newMessage, setNewMessage] = useState(newMessageInitialState);
+    const [newMessage, setNewMessage] = useState({});
+    useEffect(() => {
+        setNewMessage(newMessageInitialState);
+    }, [userId]);
 
     const handleAddMessage = (event) => {
         event.preventDefault();
