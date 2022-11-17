@@ -1,7 +1,0 @@
-.myFooter {
-  color: var(--base-light-color);
-  background-color: var(--header-bg-color);
-  height: 100px;
-  padding: 10px;
-  grid-area: footer;
-}

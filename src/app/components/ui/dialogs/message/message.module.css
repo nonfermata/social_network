@@ -1,0 +1,89 @@
+.incomingMessageWrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding-bottom: 10px;
+    justify-content: flex-end;
+    margin-left: 45%;
+}
+
+.outgoingMessageWrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding-bottom: 10px;
+    justify-content: flex-start;
+    margin-right: 45%;
+}
+
+.avatar {
+    width: 30px;
+    border-radius: 30%;
+    border: 1px solid var(--main-border-color);
+}
+
+.avatarRight {
+    order: 1;
+}
+
+.incomingMessage {
+    background-color: var(--incom-msg-bg-color);
+    position: relative;
+    padding: 7px 10px 5px;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    box-shadow: 0 1px 1px 0 #ddd;
+    min-width: 100px;
+}
+
+.outgoingMessage {
+    background-color: var(--outcom-msg-bg-color);
+    position: relative;
+    padding: 7px 10px 5px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    box-shadow: 0 1px 1px 0 #ddd;
+    min-width: 100px;
+}
+
+.incomingMessage::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -8px;
+    border: 4px solid transparent;
+    border-top: 4px solid var(--incom-msg-bg-color);
+    border-left: 4px solid var(--incom-msg-bg-color);
+}
+
+.outgoingMessage::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -8px;
+    border: 4px solid transparent;
+    border-top: 4px solid var(--outcom-msg-bg-color);
+    border-right: 4px solid var(--outcom-msg-bg-color);
+}
+
+.deleteBtn {
+    position: absolute;
+    left: 6px;
+    bottom: 0;
+    height: 26px;
+    padding: 5px;
+    transition: opacity ease 0.1s;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.deleteBtn:hover {
+    opacity: 1;
+}
+
+.time {
+    font-size: 0.8em;
+    text-align: right;
+    margin-top: 7px;
+    color: var(--time-grey-color);
+}

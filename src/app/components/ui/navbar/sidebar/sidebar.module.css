@@ -1,0 +1,5 @@
+.sidebar {
+    background-color: var(--sidebar-bg-color);
+    padding: 20px;
+    grid-area: sidebar;
+}
