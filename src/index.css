@@ -1,25 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 :root {
-    --base-color: #111;
-    --base-light-color: #fff;
+    --base-black-color: #111;
+    --base-white-color: #fff;
     --base-bg-color: #fffff5;
-    --header-bg-color: hsl(170, 90%, 25%);
+    --header-bg-color: hsl(170, 91%, 25%);
     --sidebar-bg-color: hsl(60, 40%, 90%);
     --active-dialog-arrow-color: hsl(60, 40%, 80%);
     --incom-msg-bg-color: hsl(60, 100%, 88%);
     --outcom-msg-bg-color: hsl(100, 80%, 90%);
     --extra-light-grey-color: hsl(50, 10%, 95%);
     --light-grey-color: hsl(50, 10%, 75%);
-    --time-grey-color: hsl(50, 10%, 60%);
     --semi-grey-color: hsl(50, 10%, 50%);
+    --time-grey-color: hsl(50, 10%, 60%);
     --user-data-color: var(--semi-grey-color);
     --main-title-color: var(--header-bg-color);
     --links-hover-color: hsl(170, 60%, 40%);
     --links-active-color: hsl(20, 100%, 45%);
     --main-border-color: hsl(60, 20%, 85%);
     --post-border-color: var(--sidebar-bg-color);
-    --likes-color: hsl(60, 40%, 40%);
+    --likes-color: hsl(46, 37%, 57%);
 }
 
 * {
@@ -41,7 +41,7 @@ select {
 body {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 15px;
-    color: var(--base-color);
+    color: var(--base-black-color);
 }
 
 .container {

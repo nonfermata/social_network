@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import classes from "./addMessageForm.module.css";
 import PropTypes from "prop-types";
 import TextareaField from "../../../common/form/textareaField";
+import Button from "../../../common/button/button";
 
 const AddMessageForm = ({ addMessage, userId }) => {
     const newMessageInitialState = {
@@ -31,16 +32,15 @@ const AddMessageForm = ({ addMessage, userId }) => {
     return (
         <form className={classes.addMessageForm} onSubmit={handleAddMessage}>
             <TextareaField
-                extraClass="textarea-message"
+                extraClass="textareaAddMsg"
                 name="content"
                 value={newMessage.content}
                 onChange={handleChange}
                 placeholder="write new message here..."
             />
-
-            <button className={classes.addMessageButton} title="Send message">
+            <Button extraClass="addMsgBtn" title="Send message">
                 &#10148;
-            </button>
+            </Button>
         </form>
     );
 };

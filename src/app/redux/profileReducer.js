@@ -1,17 +1,17 @@
-import profileAvatarURL from "../assets/profile-avatar.png";
+const setProfileToStore = "SET_PROFILE_TO_STORE";
 
-const initialState = {
-    _id: "9253678000",
-    avatarURL: profileAvatarURL,
-    name: "Dmitry Baulin",
-    dateOfBirth: "10.09.1975",
-    city: "Moscow",
-    website: "https://febrecords.ru",
-    phone: "+7 123 4567890"
-};
+export const setProfileToStoreAC = (profile) => ({
+    type: setProfileToStore,
+    profile
+});
 
-const profileReducer = (state = initialState) => {
-    return state;
+const profileReducer = (state = {}, action) => {
+    switch (action.type) {
+        case setProfileToStore:
+            return { ...action.profile };
+        default:
+            return state;
+    }
 };
 
 export default profileReducer;

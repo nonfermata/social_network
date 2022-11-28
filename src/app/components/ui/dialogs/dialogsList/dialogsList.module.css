@@ -27,14 +27,14 @@
 }
 
 .person a:hover {
-    color: var(--base-color);
+    color: var(--base-black-color);
 }
 
 .person a.active {
     font-size: 1.07em;
     transition: all 0.15s ease;
     font-weight: 500;
-    color: var(--base-color);
+    color: var(--base-black-color);
     position: relative;
 }
 

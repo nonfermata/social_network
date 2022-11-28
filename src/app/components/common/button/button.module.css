@@ -1,0 +1,39 @@
+.btn {
+    color: var(--base-white-color);
+    padding: 5px 25px;
+    cursor: pointer;
+    background: linear-gradient(0deg, #009973, #00785a);
+    border: 1px solid var(--header-bg-color);
+    border-radius: 30px;
+    opacity: 0.8;
+    transition: ease all 0.1s;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.btn:active {
+    color: var(--header-bg-color);
+    opacity: 1;
+    background: transparent;
+    transition: none;
+}
+.addPostBtn {
+    align-self: flex-end;
+}
+
+.addMsgBtn {
+    padding: 5px 20px;
+}
+
+.followBtn,
+.unfollowBtn {
+    padding: 5px 10px ;
+    width: 100px;
+}
+
+.unfollowBtn {
+    background: linear-gradient(0deg, #1495a8, #117c8c);
+    border: 1px solid #0d6370;
+}

@@ -1,5 +1,5 @@
 .post {
-    color: var(--base-color);
+    color: var(--base-black-color);
     border-top: 5px solid var(--post-border-color);
     padding: 20px;
     position: relative;
@@ -17,16 +17,29 @@
     background-color: hsl(60, 55%, 91%);
 }
 
+.postHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.authorTimeWrap {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.postAuthor {
+    font-weight: 600;
+}
+
 .time {
-    position: absolute;
-    top: 1em;
-    right: 1em;
     color: var(--semi-grey-color);
-    font-size: .9em;
+    font-size: 0.85em;
 }
 
 .postTitle {
-    margin-top: 0.5em;
+    margin-top: 1em;
     margin-bottom: 0.5em;
     font-size: 1.1em;
     font-weight: 500;
@@ -36,15 +49,14 @@
 .avatar {
     display: block;
     width: 50px;
-    height: 50px;
     border: 1px solid var(--main-border-color);
-    border-radius: 50%;
+    border-radius: 30%;
 }
 
 .likesBox {
     display: flex;
     gap: 10px;
-    align-items: center;
+    align-items: flex-end;
     margin-top: 10px;
     margin-left: 5px;
 }

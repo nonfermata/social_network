@@ -4,26 +4,3 @@
     align-items: flex-end;
     gap: 10px;
 }
-
-.addMessageButton {
-    color: var(--base-light-color);
-    padding: 5px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    background: linear-gradient(0deg, #009973, #00785a);
-    border: 1px solid var(--header-bg-color);
-    border-radius: 30px;
-    opacity: 0.8;
-    transition: ease all 0.1s;
-}
-
-.addMessageButton:hover {
-    opacity: 1;
-}
-
-.addMessageButton:active {
-    color: var(--header-bg-color);
-    opacity: 1;
-    background: transparent;
-    transition: none;
-}

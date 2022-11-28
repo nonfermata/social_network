@@ -2,6 +2,8 @@ import React from "react";
 import AddPostForm from "./addPostForm/addPostForm";
 import PropTypes from "prop-types";
 import PostsList from "./postsList/postsList";
+import { connect } from "react-redux";
+import { addPostAC } from "../../../redux/postsReducer";
 
 const Posts = ({ posts, users, addPost }) => {
     return (
@@ -17,4 +19,15 @@ Posts.propTypes = {
     addPost: PropTypes.func
 };
 
-export default Posts;
+const mapStateToProps = (state) => ({
+    posts: state.posts,
+    users: state.users
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    addPost: (newPost) => {
+        dispatch(addPostAC(newPost));
+    }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Posts);

@@ -4,17 +4,25 @@ import Message from "../message/message";
 import PropTypes from "prop-types";
 import AddMessageForm from "../addMessageForm/addMessageForm";
 import getTimeAndDate from "../../../../utils/getTimeAndDate";
+import _ from "lodash";
+import { connect } from "react-redux";
+import {
+    addMessageAC,
+    deleteMessageAC
+} from "../../../../redux/messagesReducer";
 
 const Dialog = ({
-    messages,
-    profileAvatarURL,
     userId,
     userAvatarURL,
+    messages,
+    profileAvatarURL,
     addMessage,
     deleteMessage
 }) => {
-    const userMessages = messages.filter(
-        (message) => message.userId === userId
+    const userMessages = _.orderBy(
+        messages.filter((message) => message.userId === userId),
+        ["created_at"],
+        ["asc"]
     );
     let previousDate;
     return (
@@ -56,4 +64,18 @@ Dialog.propTypes = {
     deleteMessage: PropTypes.func
 };
 
-export default Dialog;
+const mapStateToProps = ({ messages, profile }) => ({
+    messages,
+    profileAvatarURL: profile.avatarURL
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    addMessage: (newMessage) => {
+        dispatch(addMessageAC(newMessage));
+    },
+    deleteMessage: (messageId) => {
+        dispatch(deleteMessageAC(messageId));
+    }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dialog);

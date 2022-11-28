@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import SelectField from "../../../common/form/selectField";
 import TextField from "../../../common/form/textField";
 import TextareaField from "../../../common/form/textareaField";
+import Button from "../../../common/button/button";
 
 const AddPostForm = ({ users, addPost }) => {
     const newPostInitialState = {
@@ -49,7 +50,9 @@ const AddPostForm = ({ users, addPost }) => {
                 onChange={handleChange}
                 placeholder="напишите свой пост здесь..."
             />
-            <button className={classes.newPostSubmitButton}>Add post</button>
+            <Button title="Add post" extraClass="addPostBtn">
+                Add post
+            </Button>
         </form>
     );
 };
