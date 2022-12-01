@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import classes from "./users.module.css";
 import User from "../../ui/user/user";
 import { connect } from "react-redux";
-import { followChangeAC } from "../../../redux/usersReducer";
+import { followChange } from "../../../redux/usersReducer";
 
 const Users = ({ users, followChange }) => {
     return (
@@ -29,10 +29,6 @@ const mapStateToProps = ({ users }) => ({
     users
 });
 
-const mapDispatchToProps = (dispatch) => ({
-    followChange: (userId) => {
-        dispatch(followChangeAC(userId));
-    }
-});
+const mapDispatchToProps = { followChange };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Users);

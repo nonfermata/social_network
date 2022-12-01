@@ -3,7 +3,7 @@ import AddPostForm from "./addPostForm/addPostForm";
 import PropTypes from "prop-types";
 import PostsList from "./postsList/postsList";
 import { connect } from "react-redux";
-import { addPostAC } from "../../../redux/postsReducer";
+import { addPost } from "../../../redux/postsReducer";
 
 const Posts = ({ posts, users, addPost }) => {
     return (
@@ -19,15 +19,10 @@ Posts.propTypes = {
     addPost: PropTypes.func
 };
 
-const mapStateToProps = (state) => ({
-    posts: state.posts,
-    users: state.users
+const mapStateToProps = ({ posts }) => ({
+    posts
 });
 
-const mapDispatchToProps = (dispatch) => ({
-    addPost: (newPost) => {
-        dispatch(addPostAC(newPost));
-    }
-});
+const mapDispatchToProps = { addPost };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Posts);

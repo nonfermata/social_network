@@ -1,3 +1,4 @@
 {
-  "apiEndpoint": "http://localhost:3001/"
+  "apiEndpoint": "https://social-network-7a172-default-rtdb.europe-west1.firebasedatabase.app/",
+  "isFireBase": true
 }

@@ -6,8 +6,24 @@
     margin-bottom: 50px;
 }
 
-.value {
+.description {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    justify-content: flex-start;
+}
+
+.livesIn {
+    color: var(--semi-grey-color);
+}
+
+.livesInValue {
     color: var(--main-title-color);
+}
+
+.status {
+    color: var(--likes-color);
+    font-style: italic;
+    font-size: 0.95em;
 }
 
 .tittleName {

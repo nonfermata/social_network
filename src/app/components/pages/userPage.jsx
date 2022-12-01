@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import classes from "../profile/profile.module.css";
-import ProfileCard from "../../ui/profileCard/profileCard";
-import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
-import Posts from "../../ui/posts/posts";
+import classes from "./profile/profile.module.css";
+import ProfileCard from "../ui/profileCard/profileCard";
+import Loader from "../../utils/loader/loader";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import Loader from "../../../utils/loader/loader";
 
-const Profile = ({ users }) => {
+const UserPage = ({ users }) => {
     const { userId } = useParams();
     const [profile, setProfile] = useState();
     useEffect(() => {
@@ -24,14 +23,13 @@ const Profile = ({ users }) => {
                         location={profile.location}
                         status={profile.status}
                     />
-                    <Posts users={users} />
                 </div>
             </>
         );
     }
     return <Loader />;
 };
-Profile.propTypes = {
+UserPage.propTypes = {
     users: PropTypes.arrayOf(PropTypes.object)
 };
 
@@ -39,4 +37,4 @@ const mapStateToProps = ({ users }) => ({
     users
 });
 
-export default connect(mapStateToProps)(Profile);
+export default connect(mapStateToProps)(UserPage);

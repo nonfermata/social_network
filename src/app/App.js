@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 import UsersProvider from "./hooks/useUsers";
 import PostsProvider from "./hooks/usePosts";
 import MessagesProvider from "./hooks/useMessages";
-import ProfileProvider from "./hooks/useProfile";
 
 const App = () => {
     return (
@@ -17,9 +16,7 @@ const App = () => {
             <UsersProvider>
                 <PostsProvider>
                     <MessagesProvider>
-                        <ProfileProvider>
-                            <Main />
-                        </ProfileProvider>
+                        <Main />
                     </MessagesProvider>
                 </PostsProvider>
             </UsersProvider>

@@ -1,13 +1,13 @@
-const addPost = "ADD_POST";
-const setPostsToStore = "SEND_POSTS_TO_STORE";
+const addNewPost = "ADD_POST";
+const setPosts = "SEND_POSTS_TO_STORE";
 
-export const setPostsToStoreAC = (posts) => ({
-    type: setPostsToStore,
+export const setPostsToStore = (posts) => ({
+    type: setPosts,
     posts
 });
 
-export const addPostAC = (newPost) => ({
-    type: addPost,
+export const addPost = (newPost) => ({
+    type: addNewPost,
     authorId: newPost.authorId,
     title: newPost.title,
     content: newPost.content
@@ -16,7 +16,7 @@ export const addPostAC = (newPost) => ({
 const postsReducer = (state = [], action) => {
     const newState = state.map((object) => ({ ...object }));
     switch (action.type) {
-        case addPost:
+        case addNewPost:
             newState.push({
                 _id: String(Date.now()),
                 created_at: String(Date.now()),
@@ -26,7 +26,7 @@ const postsReducer = (state = [], action) => {
                 likes: 0
             });
             return newState;
-        case setPostsToStore:
+        case setPosts:
             return [...action.posts];
         default:
             return newState;

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import classes from "./message.module.css";
 import deleteIcon from "../../../../assets/delete-icon.png";
 import PropTypes from "prop-types";
+import httpService from "../../../../services/http.service";
 
 const Message = ({
     _id,
@@ -29,6 +30,7 @@ const Message = ({
     }
 
     const handleDeleteMessage = (messageId) => {
+        httpService.delete("/messages/" + messageId);
         deleteMessage(messageId);
     };
 

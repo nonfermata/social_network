@@ -20,6 +20,11 @@ const Dialogs = ({ users }) => {
                             <Dialog
                                 userId={item._id}
                                 userAvatarURL={item.avatarURL}
+                                profileAvatarURL={
+                                    users.find(
+                                        (user) => user._id === "9253678000"
+                                    ).avatarURL
+                                }
                             />
                         }
                     />

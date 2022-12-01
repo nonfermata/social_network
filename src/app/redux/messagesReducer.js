@@ -1,40 +1,38 @@
-import moment from "moment";
+const setMessages = "SET_MESSAGES_TO_STORE";
+const addMsg = "ADD_MESSAGE";
+const deleteMsg = "DELETE_MESSAGE";
 
-const setMessagesToStore = "SET_MESSAGES_TO_STORE";
-const addMessage = "ADD_MESSAGE";
-const deleteMessage = "DELETE_MESSAGE";
-
-export const setMessagesToStoreAC = (messages) => ({
-    type: setMessagesToStore,
+export const setMessagesToStore = (messages) => ({
+    type: setMessages,
     messages
 });
 
-export const addMessageAC = (newMessage) => ({
-    type: addMessage,
+export const addMessage = (newMessage) => ({
+    type: addMsg,
     content: newMessage.content,
     userId: newMessage.userId
 });
-export const deleteMessageAC = (messageId) => ({
-    type: deleteMessage,
+export const deleteMessage = (messageId) => ({
+    type: deleteMsg,
     messageId
 });
 
 const messagesReducer = (state = [], action) => {
     let newState;
     switch (action.type) {
-        case addMessage:
-            newState = state.map((item) => item);
+        case addMsg:
+            newState = [...state];
             newState.push({
                 _id: String(Date.now()),
-                userId: action.userId,
-                created_at: moment().format("MMM D, YYYY HH:mm:ss"),
                 content: action.content,
-                type: "outgoing"
+                created_at: Date.now(),
+                type: "outgoing",
+                userId: action.userId
             });
             return newState;
-        case deleteMessage:
+        case deleteMsg:
             return state.filter((message) => message._id !== action.messageId);
-        case setMessagesToStore:
+        case setMessages:
             return [...action.messages];
         default:
             return state;

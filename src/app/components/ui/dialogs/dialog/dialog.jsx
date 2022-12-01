@@ -3,13 +3,10 @@ import classes from "./dialog.module.css";
 import Message from "../message/message";
 import PropTypes from "prop-types";
 import AddMessageForm from "../addMessageForm/addMessageForm";
-import getTimeAndDate from "../../../../utils/getTimeAndDate";
 import _ from "lodash";
 import { connect } from "react-redux";
-import {
-    addMessageAC,
-    deleteMessageAC
-} from "../../../../redux/messagesReducer";
+import { addMessage, deleteMessage } from "../../../../redux/messagesReducer";
+import moment from "moment";
 
 const Dialog = ({
     userId,
@@ -19,7 +16,7 @@ const Dialog = ({
     addMessage,
     deleteMessage
 }) => {
-    const userMessages = _.orderBy(
+    const messagesOrdered = _.orderBy(
         messages.filter((message) => message.userId === userId),
         ["created_at"],
         ["asc"]
@@ -27,9 +24,9 @@ const Dialog = ({
     let previousDate;
     return (
         <div className={classes.dialogWrap}>
-            {userMessages.map((message) => {
-                const time = getTimeAndDate(message.created_at).time;
-                const date = getTimeAndDate(message.created_at).date;
+            {messagesOrdered.map((message) => {
+                const time = moment(message.created_at).format("HH:mm");
+                const date = moment(message.created_at).format("MMM D, YYYY");
 
                 let dateClass = classes.date + " hidden";
                 if (date !== previousDate) {
@@ -64,18 +61,13 @@ Dialog.propTypes = {
     deleteMessage: PropTypes.func
 };
 
-const mapStateToProps = ({ messages, profile }) => ({
-    messages,
-    profileAvatarURL: profile.avatarURL
+const mapStateToProps = ({ messages }) => ({
+    messages
 });
 
-const mapDispatchToProps = (dispatch) => ({
-    addMessage: (newMessage) => {
-        dispatch(addMessageAC(newMessage));
-    },
-    deleteMessage: (messageId) => {
-        dispatch(deleteMessageAC(messageId));
-    }
-});
+const mapDispatchToProps = {
+    addMessage,
+    deleteMessage
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dialog);
