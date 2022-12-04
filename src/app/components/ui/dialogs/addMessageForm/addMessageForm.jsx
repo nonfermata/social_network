@@ -3,7 +3,6 @@ import classes from "./addMessageForm.module.css";
 import PropTypes from "prop-types";
 import TextareaField from "../../../common/form/textareaField";
 import Button from "../../../common/button/button";
-import httpService from "../../../../services/http.service";
 
 const AddMessageForm = ({ addMessage, userId }) => {
     const newMessageInitialState = {
@@ -15,20 +14,9 @@ const AddMessageForm = ({ addMessage, userId }) => {
         setNewMessage(newMessageInitialState);
     }, [userId]);
 
-    const addMsgToDB = () => {
-        const message = {
-            ...newMessage,
-            _id: String(Date.now()),
-            created_at: Date.now(),
-            type: "outgoing"
-        };
-        httpService.put("messages/" + message._id, message);
-    };
-
     const handleAddMessage = (event) => {
         event.preventDefault();
         if (newMessage.content.trim()) {
-            addMsgToDB();
             addMessage(newMessage);
             setNewMessage(newMessageInitialState);
         }

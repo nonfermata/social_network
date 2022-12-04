@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import classes from "./message.module.css";
 import deleteIcon from "../../../../assets/delete-icon.png";
 import PropTypes from "prop-types";
-import httpService from "../../../../services/http.service";
 
 const Message = ({
     _id,
@@ -29,11 +28,6 @@ const Message = ({
         avatarClass = classes.avatar + " " + classes.avatarRight;
     }
 
-    const handleDeleteMessage = (messageId) => {
-        httpService.delete("/messages/" + messageId);
-        deleteMessage(messageId);
-    };
-
     const showOptions = () => {
         setDeleteBtnClass(classes.deleteBtn);
     };
@@ -57,7 +51,7 @@ const Message = ({
                         src={deleteIcon}
                         alt="Delete"
                         title="Delete"
-                        onClick={() => handleDeleteMessage(_id)}
+                        onClick={() => deleteMessage(_id)}
                     />
                     {content}
                     <div className={classes.time}>{time}</div>
