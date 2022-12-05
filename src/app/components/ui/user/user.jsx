@@ -10,7 +10,7 @@ const User = ({ user, onFollowChange }) => {
             <div className={classes.leftBlockWrap}>
                 <div className={classes.name}>{user.name}</div>
                 <Link to={"/" + user._id}>
-                    <img className={classes.avatar} src={user.avatarURL} title="Go to profile page"/>
+                    <img className={classes.avatar} src={user.avatarURL} title="Go to user profile"/>
                 </Link>
                 <div className={classes.status}>{user.status}</div>
             </div>

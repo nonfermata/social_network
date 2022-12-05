@@ -33,6 +33,7 @@ const Main = ({ setUsersToStore, setMessagesToStore, setPostsToStore }) => {
         <main className={classes.main}>
             <Routes>
                 <Route path="/profile" element={<Profile />} />
+                <Route path="/social_network" element={<Navigate to="/profile" replace />} />
                 <Route path="/:userId" element={<UserPage />} />
                 <Route path="/dialogs/*" element={<Dialogs />} />
                 <Route path="/news" element={<News />} />
@@ -41,7 +42,7 @@ const Main = ({ setUsersToStore, setMessagesToStore, setPostsToStore }) => {
                 <Route path="/users" element={<Users />} />
                 <Route path="/" element={<Navigate to="/profile" replace />} />
             </Routes>
-            {/* <Button onClick={initialize}>Восстановить БД</Button> */}
+            {/*<Button onClick={initialize}>Восстановить БД</Button>*/}
         </main>
     );
 };
